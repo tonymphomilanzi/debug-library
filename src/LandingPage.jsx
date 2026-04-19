@@ -31,7 +31,8 @@ function GridBackground() {
   )
 }
 
- Navbar({ onEnter }) {
+
+function Navbar({ onEnter }) {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#1a1a1a] bg-[#0a0a0a]/80 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
@@ -76,7 +77,8 @@ function HeroSection({ onEnter }) {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-24">
         <div className="max-w-3xl">
-       
+     
+
           <h1 className="mt-8 text-6xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight">
             Debug smarter.{' '}
             <span className="text-[#444]">Learn faster.</span>
