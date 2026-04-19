@@ -3,7 +3,7 @@ import {
   Bug, ArrowRight, Timer, Brain, GitBranch, 
   BookOpen, TrendingUp, CheckCircle, Zap,
   Users, Shield, Download, ChevronRight,
-  Clock, AlertTriangle, Lightbulb, Code2
+  Clock, AlertTriangle, Lightbulb, Code2,Coffee
 } from 'lucide-react'
 
 const GRID_SIZE = 40
