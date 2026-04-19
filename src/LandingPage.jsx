@@ -31,7 +31,7 @@ function GridBackground() {
   )
 }
 
-function LiveBadge() {
+{/**function LiveBadge() {
   return (
     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#2a2a2a] bg-[#111] text-xs text-[#888]">
       <span className="relative flex h-1.5 w-1.5">
@@ -41,7 +41,7 @@ function LiveBadge() {
       v1.0 is live — free forever
     </div>
   )
-}
+}**/}
 
 function Navbar({ onEnter }) {
   return (
@@ -117,18 +117,7 @@ function HeroSection({ onEnter }) {
             </a>
           </div>
 
-          <div className="mt-12 flex items-center gap-6">
-            {[
-              { label: 'Free forever', icon: Shield },
-              { label: 'No account needed', icon: Zap },
-              { label: 'Data stays local', icon: Download },
-            ].map(({ label, icon: Icon }) => (
-              <div key={label} className="flex items-center gap-1.5 text-xs text-[#555]">
-                <Icon size={11} />
-                {label}
-              </div>
-            ))}
-          </div>
+          
         </div>
 
         {/* Floating UI Preview */}
@@ -466,30 +455,7 @@ function PhilosophySection() {
   )
 }
 
-const STATS = [
-  { value: '5', label: 'Understanding Layers', sub: 'per bug entry' },
-  { value: '∞', label: 'Bug Entries', sub: 'no limit ever' },
-  { value: '6', label: 'Debug Playbooks', sub: 'built in' },
-  { value: '100%', label: 'Local & Private', sub: 'your data stays yours' },
-]
 
-function StatsSection() {
-  return (
-    <section className="py-20 border-t border-[#1a1a1a]">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#1a1a1a] rounded-xl overflow-hidden">
-          {STATS.map(({ value, label, sub }) => (
-            <div key={label} className="bg-[#0a0a0a] p-8 text-center">
-              <p className="text-4xl font-bold text-white mb-1">{value}</p>
-              <p className="text-sm text-[#888]">{label}</p>
-              <p className="text-xs text-[#444] mt-0.5">{sub}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 const PLAYBOOKS_PREVIEW = [
   'Nothing works, no error',
@@ -566,7 +532,7 @@ function CTASection({ onEnter }) {
             <ArrowRight size={15} />
           </button>
           <p className="mt-4 text-xs text-[#444]">
-            Free forever · No sign up · Export your data anytime
+            No sign up · Export your data anytime
           </p>
         </div>
       </div>
@@ -588,8 +554,19 @@ function Footer() {
           © {new Date().getFullYear()} DEBUGLIB. FREE & OPEN. BUILT FOR DEVELOPERS.
         </p>
         <div className="flex items-center gap-1.5 text-xs text-[#555]">
-          <CheckCircle size={11} className="text-green-400" />
-          Free forever
+            {/* Coffee in footer too */}
+                      <a
+                      href="https://ko-fi.com/tonymphomilanzi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3.5 py-1.5 text-xs font-medium text-amber-700 shadow-sm transition-all hover:border-amber-300 hover:bg-amber-100 hover:shadow-md"
+                    >
+                      <Coffee
+                        className="h-3.5 w-3.5 text-amber-500 transition-transform group-hover:rotate-12"
+                        strokeWidth={2}
+                      />
+                     Buy me a coffee
+                    </a>
         </div>
       </div>
     </footer>
