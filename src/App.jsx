@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import LandingPage from './LandingPage'
 import Sidebar from './components/layout/Sidebar'
 import Dashboard from './components/views/Dashboard'
 import BugList from './components/views/BugList'
@@ -22,7 +24,12 @@ const views = {
 
 export default function App() {
   const { activeView } = useDebugStore()
+  const [showApp, setShowApp] = useState(false)
   const View = views[activeView] || Dashboard
+
+  if (!showApp) {
+    return <LandingPage onEnter={() => setShowApp(true)} />
+  }
 
   return (
     <div className="flex h-screen bg-[#0a0a0a] overflow-hidden font-sans">
