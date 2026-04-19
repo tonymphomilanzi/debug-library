@@ -578,7 +578,7 @@ export default function LandingPage({ onEnter }) {
     <div className="min-h-screen bg-[#0a0a0a] font-sans">
       <Navbar onEnter={onEnter} />
       <HeroSection onEnter={onEnter} />
-      <StatsSection />
+
       <FeaturesSection />
       <HowItWorksSection />
       <PhilosophySection />
